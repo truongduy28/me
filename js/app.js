@@ -10,6 +10,16 @@ window.addEventListener("scroll", function() {
     header.classList.toggle("sticky", window.scrollY > 0);
 })
 
+window.addEventListener('load', function() {
+    const pageload = document.querySelector('.page-load');
+
+    setTimeout(function() {
+        pageload.style.bottom = '100%';
+        pageload.style.top = '-100%';
+        // pageload.parentElement.removeChild(pageload);
+    }, 2000);
+})
+
 const clock = setInterval(myTimer, 1000);
 
 function myTimer() {
